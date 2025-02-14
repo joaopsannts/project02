@@ -33,6 +33,7 @@ const loadLocation = async () => {
   } catch {
     console.log("error: ", error);
   }
+
 };
 
 const loadEpisode = async () => {
@@ -57,8 +58,10 @@ const loadAllWithPromise = async () => {
   ]);
 
   showCharacter(character.results);
-  //   console.log(location);
-  //   console.log(episode);
+  showLocation(),
+  showEpisode(),
+  // console.log(location);
+  // console.log(episode);
 };
 
 loadAllWithPromise();
@@ -78,10 +81,20 @@ const showCharacter = (characteres) => {
         <span class="location"> location </span>
         <a class="character-link" href="${character.location.url}"> ${character.location.name}</a>
 
-        <span class="location"> Origin </span>
+        <span class="origin"> Origin </span>
         <a class="character-link" href="${character.origin.url}"> ${character.origin.name} >
         </article>
       `;
+    divCharacter.classList.add("character-box");
     characterContainer.appendChild(divCharacter);
+    divCharacter.addEventListener("click", () => {
+      characterDetails(character.id);
+    });
   });
 };
+
+const characterDetails = (id) => {
+  window.location.href = `./pages/character.html?id=${id}`;
+};
+
+loadAllWithPromise();

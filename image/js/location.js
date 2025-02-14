@@ -1,4 +1,4 @@
-const loadCharacter = async (url, id) => {
+const loadLocation = async (url, id) => {
   try {
     const res = await fetch(`${url}/${id}`);
     if (!res.ok) {
@@ -22,15 +22,15 @@ const loadInfo = async () => {
     console.log("ID não encontrado");
     return;
   }
-
-  const baseUrl = "https://rickandmortyapi.com/api/character";
+  const baseUrl2 = "https://rickandmortyapi.com/api/location";
   try {
-    const character = await loadCharacter(baseUrl, idParam);
-    showCharacter(character);
+    const location = await loadLocation(baseUrl2, idParam);
+    showLocation(location);
   } catch (error) {}
 };
 loadInfo();
 
 const showCharacter = (personagem) => {
-  console.log(personagem);
+  console.log(personagem.location);
 };
+

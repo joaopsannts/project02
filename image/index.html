@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +40,34 @@
       <section class="episode-session"></section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a title="characters" href="/api/character"
+            ><span class="rubrica"> characters </span
+          ></a>
+        </li>
+        <li>
+          <a title="locations" href="/api/location"
+            ><span class="rubrica"> locations </span
+          ></a>
+        </li>
+        <li>
+          <a title="episodes" href="https://rickandmortyapi.com/api/location"
+            ><span class="rubrica"> episodes </span
+          ></a>
+        </li>
+      </ul>
+
+      <a
+        href="https://status.rickandmortyapi.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+        data-testid="server-status"
+        class="link-externo"
+        ><span class="rubrica"> server status </span> <span class="server-icon"> </span>
+      </a>
+    </footer>
 
     <script src="js/app.js"></script>
   </body>
