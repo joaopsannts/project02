@@ -58,8 +58,7 @@ const loadAllWithPromise = async () => {
   ]);
 
   showCharacter(character.results);
-  showLocation(),
-  showEpisode(),
+  
   // console.log(location);
   // console.log(episode);
 };
@@ -96,5 +95,3 @@ const showCharacter = (characteres) => {
 const characterDetails = (id) => {
   window.location.href = `./pages/character.html?id=${id}`;
 };
-
-loadAllWithPromise();

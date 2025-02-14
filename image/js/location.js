@@ -2,7 +2,7 @@ const loadLocation = async (url, id) => {
   try {
     const res = await fetch(`${url}/${id}`);
     if (!res.ok) {
-      throw new Error(`Erro ao carregar personagem`);
+      throw new Error(`Erro ao carregar localização`);
     }
     const data = await res.json();
     return data;
